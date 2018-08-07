@@ -3,3 +3,55 @@
       <h1>Hello World! My name is NiMoney</h1>
   </body>
 </html>
+ <html>
+       
+       <head>
+           <meta charset="utf-8" />
+           <meta http-equiv="X-UA-Compatible" content="IE=edge">
+           <title>Page Title</title>
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+       </head>
+       
+       <body>
+           <h1>Hello, my name is Jose L. Teran!</h1>
+           <h3>This is my website!</h3>
+           <p>I am a software engineer at Microsoft. I write C++ code for Edge's rendering engine. This means that all the html code
+               you see is processed by the engine I write code for! Think about my job as writing code to process more code!
+           </p>
+       
+           <div>Below you will be able to see three images that describe me!</div>
+           <div>
+               <button onclick="MoveLeft()">&lt;</button>
+               <img id="imgRotate" width="50%" src="http://logok.org/wp-content/uploads/2015/04/Microsoft-Edge-Browser-logo.png" />
+               <button onclick="MoveRight()">&gt;</button>
+           </div>
+           <script>
+               var index = 0;
+               var arrayOfImages = [
+                   "http://logok.org/wp-content/uploads/2015/04/Microsoft-Edge-Browser-logo.png",
+                   "https://www.tealsk12.org/wp-content/uploads/2015/10/classroom.png",
+                   "http://www.iamwire.com/wp-content/uploads/2017/09/writing-code33.jpg"
+               ]
+       
+               function MoveLeft() {
+                   if (index == 0) {
+                       index = 3
+                   }
+                   index--;
+                   var img = document.getElementById("imgRotate")
+                   img.src = arrayOfImages[index]
+       
+               }
+       
+               function MoveRight() {
+                   if (index == 2) {
+                       index = -1
+                   }
+                   index++
+                   var img = document.getElementById("imgRotate")
+                   img.src = arrayOfImages[index]
+               }
+           </script>
+       </body>
+       
+       </html>
